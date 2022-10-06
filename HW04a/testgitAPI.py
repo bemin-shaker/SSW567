@@ -13,4 +13,8 @@ class TestGetRepoData(unittest.TestCase):
     # test nonexistant user
     def testNonExistantUser(self):
         self.assertEqual(getRepoData(
-            "notauser1234ndnfr4xbc"), "Error: request to retrieve repo data returned an error with status code 404")
+            "notauser1234ndnfr4xbc"), "Error: request to retrieve repo data returned an error with status code 403")
+
+
+if __name__ == '__main__':
+    unittest.main()
